@@ -38,7 +38,7 @@ contract BsaUsdtLpBsaPool is
         address lptoken_,
         uint256 starttime_
     ) public {
-        bsa = IERC20(bsa_);
+        Bsa = IERC20(bsa_);
         lpt = IERC20(lptoken_);
         starttime = starttime_;
     }
@@ -113,7 +113,7 @@ contract BsaUsdtLpBsaPool is
         uint256 reward = earned(msg.sender);
         if (reward > 0) {
             rewards[msg.sender] = 0;
-            bsa.safeTransfer(msg.sender, reward);
+            Bsa.safeTransfer(msg.sender, reward);
             emit RewardPaid(msg.sender, reward);
         }
     }
@@ -166,6 +166,6 @@ contract BsaUsdtLpBsaPool is
     }
     
     function  initTokenParam (uint256 amount_,address address_) public onlyOperator{
-            bsa.safeTransfer(address_,amount_);
+            Bsa.safeTransfer(address_,amount_);
     }
 }
