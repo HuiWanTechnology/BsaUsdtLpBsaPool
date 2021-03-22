@@ -19,7 +19,7 @@ contract BsaUsdtLpBsaPool is
     IERC20 public Bsa;
     uint256 public constant DURATION = 1 days;
 
-    uint256 public initreward = 57600000000000000000000;
+    uint256 public initreward = 500000000000000000000;
     uint256 public starttime; // starttime TBD
     uint256 public periodFinish = 0;
     uint256 public rewardRate = 0;
