@@ -5,13 +5,13 @@ import "https://github.com/HuiWanTechnology/BsaUsdtLpBsaPool/blob/main/BsaUsdtLp
 
 contract BsaUsdtLpBsaPool_impl is BsaUsdtLpBsaPool {
     /**
-     * 构造函数
+     * constructor
      *
      * Requirements:
      *
-     * - `bsa_` 代币地址
-     * - `lptoken_` 配对合约地址
-     * - `starttime_` 开始时间
+     * - `bsa_` token address
+     * - `lptoken_` lptoken address
+     * - `starttime_` starttime
      */
     constructor(address bsa_, address lptoken_, uint256 starttime_) BsaUsdtLpBsaPool(bsa_,lptoken_,starttime_) public {
 
